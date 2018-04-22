@@ -1,0 +1,31 @@
+<div class="form-container">
+  <div>
+    <!-- Section Title Starts -->
+    <div class="row text-center">
+      <h2 class="title-head hidden-xs">member <span>login</span></h2>
+      <p class="info-form">Send, receive and securely store your coins in your wallet</p>
+    </div>
+    <!-- Section Title Ends -->
+    <!-- Form Starts -->
+    <form (submit)="login()">
+      <alert type="danger" *ngIf="loginError">{{ loginError }}</alert>
+      <!-- Input Field Starts -->
+      <div class="form-group">
+        <input class="form-control" name="email" [(ngModel)]="email" placeholder="EMAIL" type="email" required>
+      </div>
+      <!-- Input Field Ends -->
+      <!-- Input Field Starts -->
+      <div class="form-group">
+        <input class="form-control" name="password" [(ngModel)]="password" id="password" placeholder="PASSWORD" type="password" required>
+      </div>
+      <!-- Input Field Ends -->
+      <!-- Submit Form Button Starts -->
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">login</button>
+        <p class="text-center">don't have an account ? <a routerLink="/auth/register">register now</a>
+      </div>
+      <!-- Submit Form Button Ends -->
+    </form>
+    <!-- Form Ends -->
+  </div>
+</div>
